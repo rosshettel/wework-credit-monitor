@@ -42,3 +42,5 @@ scheduler.scheduleJob('*/15 7-18 * * 1-5', function () {
         lastCreditsUsed = creditsUsed;
     });
 });
+
+logger.info('WeWork Credits Montior started 🤖');
