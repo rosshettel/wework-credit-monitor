@@ -37,7 +37,7 @@ scheduler.scheduleJob('*/15 7-18 * * 1-5', function () {
             } else if (creditsUsed > creditsAllotted - creditsLeftThreshold) {
                 postToSlack("Just a heads up, you only have " + (creditsAllotted - creditsUsed) + " credits left.");
             }
-            logger.debug('Credits changed to ' + creditsUsed);
+            logger.info('Credits changed to ' + creditsUsed);
         }
         lastCreditsUsed = creditsUsed;
     });
