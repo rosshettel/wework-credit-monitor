@@ -11,8 +11,7 @@ function postToSlack(message) {
     superagent.post(slackWebhook, {
         text: message,
         username: 'WeWork Credits Bot',
-        icon_url: 'http://thetechmap.com/uploads/Logo_46247.png',
-        channel: '@ross'
+        icon_url: 'http://thetechmap.com/uploads/Logo_46247.png'
     }, function (err) {
         if (err) {
             logger.error('Error posting to slack', err);
