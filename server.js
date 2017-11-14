@@ -3,7 +3,7 @@ const scheduler = require('node-schedule'),
     logger = require('./logger.js'),
     infoUrl = 'https://rooms.wework.com/api/v4/rooms/info?encrypted_user_uuid=' + process.env.WEWORK_USER_UUID,
     slackWebhook = process.env.SLACK_WEBHOOK,
-    creditsLeftThreshold = 6;
+    creditsLeftThreshold = process.env.THRESHOLD || 20;
 
 var lastCreditsUsed = 0;
 
